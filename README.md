@@ -31,16 +31,16 @@ This Java-based Console Banking System is designed to simulate essential banking
 ## Core Classes
 
 ### User
-This class represents the users, storing their login credentials and associated accounts.
+Represents a user with a list of accounts.
 
-### BankAccount
-Manages the account's transactions (deposits and withdrawals) and maintains the balance. It also handles interest calculations for savings accounts.
+### Main
+Contains the main method and various static methods to handle user interactions.
+
+### Account
+Represents a bank account with transactions and interest calculation.
 
 ### Transaction
-Keeps a record of each transaction, storing details such as the transaction type (deposit/withdrawal), amount, and the date of the transaction.
-
-### BankingApp
-The central controller class that manages user input, displays menus, and processes user choices.
+Represents a transaction with a unique ID, date, type, and amount.
 
 ## Application Workflow
 
