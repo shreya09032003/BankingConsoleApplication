@@ -1,23 +1,60 @@
-# Bank Application
+# Console-Based Banking Application
 
-A simple console-based bank application that allows users to register, login, manage their accounts, and perform basic banking operations such as depositing, withdrawing, checking balances, viewing transaction history, and calculating interest for savings accounts.
+## Overview
+This is a console-based Banking Application built in Java, designed to simulate basic banking functionalities. It provides users with options to register, login, open accounts, make deposits and withdrawals, check balance, and view account statements. For savings accounts, it also calculates and adds monthly interest.
 
 ## Features
 
-- **User Registration & Login**: Users can register a new account or log into an existing account.
-- **Account Management**: Once logged in, users can open new accounts, deposit money, withdraw funds, and check account balances.
-- **Transaction History**: View detailed transaction history for each account.
-- **Interest Calculation**: Calculate interest for savings accounts based on a monthly rate.
-- **Logout**: Users can log out of the system when done.
+### User Registration & Login
+- Register a new user with a username and password.
+- Login functionality verifies credentials for secure access.
 
-## Requirements
+### Account Opening
+- Open a new bank account with unique account numbers.
+- Account details include the holder's name, account type (savings or checking), and initial deposit amount.
 
-- **Java 8+**: This application is built with Java and requires version 8 or higher to run.
-- **IDE**: Any Java-supported IDE (e.g., IntelliJ IDEA, Eclipse) can be used to run the application.
+### Transaction Processing
+- Perform deposit and withdrawal transactions on an account.
+- Prevent overdrafts by ensuring withdrawals do not exceed the balance.
+- Log each transaction with a unique ID, date, type (deposit/withdrawal), and amount.
 
-## Installation
+### Statement Generation
+- Generate an account statement showing transaction history with details such as date, type, and amount.
 
-1. **Clone the Repository:**
+### Interest Calculation
+- Monthly interest is calculated and added to savings accounts.
+- Fixed interest rate applied once per month for simplicity.
+
+### Balance Check
+- View the current balance for each account.
+
+## Class Structure
+
+### User
+Represents each user in the system with a username, password, and list of bank accounts.
+
+### BankAccount
+Stores account details, handles transactions (deposit/withdrawal), and manages balance and interest.
+
+### Transaction
+Represents individual transactions with a unique ID, date, type, and amount.
+
+### BankingApp
+The main driver class for handling user interaction, managing menus, and invoking relevant features.
+
+## Workflow
+
+1. **Register a new user** with a unique username and password.
+2. **Login** with registered credentials.
+3. **Open an account** by providing account holder details, account type, and initial deposit.
+4. **Deposit or withdraw** funds as desired.
+5. **Check balance** or view statement for transaction history.
+6. **Add monthly interest** to savings accounts (automated calculation).
+7. **Logout** to end the session.
+
+## How to Run
+
+1. **Compile all classes**:
 
    ```bash
-   git clone https://github.com/yourusername/bank-application.git
+   javac *.java
