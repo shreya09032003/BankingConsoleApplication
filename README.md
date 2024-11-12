@@ -52,11 +52,4 @@ Represents a transaction with a unique ID, date, type, and amount.
 6. **Interest**: Calculate and apply monthly interest to savings accounts.
 7. **Logout**: End the current session and return to the main menu.
 
-## Running the Application
 
-1. **Compile the code**:
-
-   To compile all Java files, use the following command:
-
-   ```bash
-   javac *.java
